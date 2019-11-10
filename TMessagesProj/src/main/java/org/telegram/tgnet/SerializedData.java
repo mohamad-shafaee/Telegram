@@ -393,7 +393,8 @@ public class SerializedData extends AbstractSerializedData {
             }
             byte[] b = new byte[l];
             in.read(b);
-            len++;
+            //len++;
+            len += b.length;
             int i = sl;
             while ((l + i) % 4 != 0) {
                 in.read();
@@ -425,7 +426,8 @@ public class SerializedData extends AbstractSerializedData {
             }
             byte[] b = new byte[l];
             in.read(b);
-            len++;
+            //len++;
+            len += b.length;
             int i = sl;
             while ((l + i) % 4 != 0) {
                 in.read();
